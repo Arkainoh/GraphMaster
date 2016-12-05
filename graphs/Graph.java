@@ -7,6 +7,8 @@ public class Graph {
 	protected ArrayList<Integer>[] adj;
 	protected StringBuffer sb;
 	
+	public Graph() {}
+	
 	public Graph(int V) {
 		this.V = V;
 		this.E = 0;
@@ -19,6 +21,7 @@ public class Graph {
 	
 	public void addEdge(int v, int w) {
 		adj[v].add(w);
+		adj[w].add(v);
 		E++;
 	}
 	
@@ -35,7 +38,7 @@ public class Graph {
 		sb.append("V: " + V + "\nE: " + E + "\n");
 		for(int v = 0; v < V; v++) {
 			for(int w : adj[v]) {
-				sb.append(v + "-" + w + "\n");
+				if(v <= w) sb.append(v + "-" + w + "\n");
 			}
 		}
 		return sb.toString();
