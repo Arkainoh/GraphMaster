@@ -1,4 +1,4 @@
-package graphs;
+package graphs.edges;
 
 public class WeightedEdge<T> {
 	public int from;
