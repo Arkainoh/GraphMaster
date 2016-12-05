@@ -6,6 +6,11 @@ public class Digraph extends Graph{
 		super(V);
 	}
 	
+	public void addEdge(int v, int w) {
+		adj[v].add(w);
+		E++;
+	}
+	
 	public String toString() {
 		sb = new StringBuffer();
 		sb.append("V: " + V + "\nE: " + E + "\n");
@@ -16,5 +21,4 @@ public class Digraph extends Graph{
 		}
 		return sb.toString();
 	}
-	
 }
