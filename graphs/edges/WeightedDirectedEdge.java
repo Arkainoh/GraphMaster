@@ -1,6 +1,6 @@
-package graphs;
+package graphs.edges;
 
-public class WeightedDirectedEdge<T> extends WeightedEdge{
+public class WeightedDirectedEdge<T> extends WeightedEdge<T>{
 	
 	public WeightedDirectedEdge(int v, int w, T weight) {
 		super(v, w, weight);
