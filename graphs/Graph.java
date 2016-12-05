@@ -2,10 +2,10 @@ package graphs;
 import java.util.ArrayList;
 
 public class Graph {
-	private int V;
-	private int E;
-	private ArrayList<Integer>[] adj;
-	private StringBuffer sb;
+	protected int V;
+	protected int E;
+	protected ArrayList<Integer>[] adj;
+	protected StringBuffer sb;
 	
 	public Graph(int V) {
 		this.V = V;
